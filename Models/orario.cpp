@@ -84,7 +84,7 @@ void Orario::Avvia(CallBackTimer& c) {
 
     c.start(1000, [&]()-> void {
 
-        secondi++;
+        Orario::Avvia();
 
     });
 }

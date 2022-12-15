@@ -11,16 +11,26 @@ int Orologio::getFusoOrario() const
 
 void Orologio::Avvia(CallBackTimer& c)
 {
+    Orario::ImpostaOraUTC();
+    Orario::ImpostaFusoOrario(fusoOrario);
+
     c.start(1000, [&]()-> void {
 
-        Orario::Avvia();
-        Data::Avvia();
+        Avvia();
 
     });
 }
 
+void Orologio::Avvia()
+{
+
+        Orario::Avvia();
+        Data::Avvia();
+
+}
+
 std::ostream& operator<<(std::ostream& os, const Orologio& o)
 {
-    return os << "Fuso orario +" << o.getFusoOrario() << dynamic_cast<const Orario&>(o) << dynamic_cast<const Data&>(o) ;
+    return os << "Fuso orario +" << o.getFusoOrario() << "  " << dynamic_cast<const Orario&>(o) << "  " << dynamic_cast<const Data&>(o);
 }
 

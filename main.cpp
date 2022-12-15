@@ -1,4 +1,7 @@
-#include "Models/orario.h"
+#include "./Models/orario.h"
+#include "./Models/data.h"
+#include "./Models/orologio.h"
+
 
 #include <iostream>
 #include <stdio.h>
@@ -32,11 +35,11 @@ int main(int argc, char *argv[])
             Sleep(1000);
     }*/
 
-    Data d1(20, 10, 2002);
+    /*Data d1(20, 10, 2002);
     std::cout << d1.GetAnno() << std::endl;
 
 
-    aCallBackTimer cBT;
+    CallBackTimer cBT;
 
     d1.Avvia(cBT);
 
@@ -47,10 +50,22 @@ int main(int argc, char *argv[])
     {
             std::cout << d1.GetAnno() << std::endl;
             Sleep(1000);
+    }*/
+
+    Orologio o1(1, 14, 20, 0, 15, 12, 2022);
+
+    CallBackTimer cBT;
+
+    o1.Avvia(cBT);
+
+    Sleep(500);
+
+
+    while(true)
+    {
+            std::cout << o1 << std::endl;
+            Sleep(1000);
     }
-
-
-
 
 
 

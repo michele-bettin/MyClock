@@ -15,9 +15,12 @@ public:
     int getFusoOrario() const;
 
     void Avvia(CallBackTimer& c);
+
+    void Avvia();
+
 };
 
-std::ostream& operator<<(std::ostream&, const Orario&);
+std::ostream& operator<<(std::ostream&, const Orologio&);
 
 
 #endif // OROLOGIO_H
