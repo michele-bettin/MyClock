@@ -9,14 +9,20 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Models/MyParallelJob.cpp \
+    Models/callbacktimer.cpp \
     Models/data.cpp \
     Models/orario.cpp \
+    Models/orologio.cpp \
     clockviewer.cpp \
     main.cpp
 
 HEADERS += \
+    Models/MyParallelJob.h \
+    Models/callbacktimer.h \
     Models/data.h \
     Models/orario.h \
+    Models/orologio.h \
     clockviewer.h
 
 # Default rules for deployment.

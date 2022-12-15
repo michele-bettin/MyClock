@@ -3,6 +3,12 @@
 
 #include <string>
 #include <iostream>
+#include <time.h>
+#include <Windows.h>
+#include "callbacktimer.h"
+
+
+
 
 class Orario
 {
@@ -17,6 +23,8 @@ friend bool operator<(const Orario&, const Orario&);
 
 private:
     unsigned int secondi;
+
+    void NormalizzaOrario();
 
 public:
     // Numero di secondi in un minuto
@@ -47,11 +55,19 @@ public:
 
     void SetSecondi(int s);
 
-    void AvanzaDiUnOra();
+    void AvanzaOre(int ore);
 
-    void AvanzaDiUnMinuto();
+    void AvanzaMinuti(int minuti);
 
-    void AvanzaDiUnSecondo();
+    void AvanzaSecondi(int secondi);
+
+    void ImpostaOraUTC();
+
+    void ImpostaFusoOrario(int zone);
+
+    virtual void Avvia(CallBackTimer& c);
+
+    virtual void Avvia();
 
 };
 
