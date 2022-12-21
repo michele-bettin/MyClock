@@ -20,11 +20,11 @@ friend bool operator==(const Orario&, const Orario&);
 friend bool operator>(const Orario&, const Orario&);
 friend bool operator<(const Orario&, const Orario&);
 
-
 private:
-    unsigned int secondi;
-
     void NormalizzaOrario();
+
+protected:
+    unsigned int secondi;
 
 public:
     // Numero di secondi in un minuto

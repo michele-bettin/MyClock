@@ -1,6 +1,6 @@
 #include "orologio.h"
 
-Orologio::Orologio(int f, int o, int min, int sec, int g, int mes, int a)
+Orologio::Orologio(int o, int min, int sec, int g, int mes, int a,int f)
     : Orario(o, min, sec), Data(g, mes, a), fusoOrario(f)
 {}
 

@@ -91,6 +91,7 @@ void Orario::Avvia(CallBackTimer& c) {
 
 void Orario::Avvia() {
     secondi++;
+    NormalizzaOrario();
 }
 
 
@@ -108,7 +109,15 @@ Orario operator+(const Orario& o1, const Orario& o2) {
 Orario operator-(const Orario& o1, const Orario& o2)
 {
     Orario aux;
-    aux.secondi = (o1.secondi - o2.secondi) % Orario::SECONDI_GIORNO;
+    int t1 = o1.secondi;
+    int t2 = o2.secondi;
+    int somma = t1 - t2;
+    if (somma < 0) {
+        aux.secondi = Orario::SECONDI_GIORNO + somma;
+    } else {
+        aux.secondi = (o1.secondi - o2.secondi) % Orario::SECONDI_GIORNO;
+    }
+
     return aux;
 }
 

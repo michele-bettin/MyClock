@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>Censor_Beep_Sound.mp3</file>
+    </qresource>
+</RCC>

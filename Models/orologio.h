@@ -10,7 +10,7 @@ class Orologio: public Orario, public Data
 private:
     int fusoOrario;
 public:
-    Orologio(int f=0, int o=0, int min=0, int sec=0, int g=0, int mes=0, int a=0);
+    Orologio(int o=0, int min=0, int sec=0, int g=0, int mes=0, int a=0, int f=0);
 
     int getFusoOrario() const;
 
@@ -20,7 +20,6 @@ public:
 
 };
 
-std::ostream& operator<<(std::ostream&, const Orologio&);
-
-
 #endif // OROLOGIO_H
+
+std::ostream& operator<<(std::ostream&, const Orologio&);

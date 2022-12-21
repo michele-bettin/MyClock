@@ -28,7 +28,8 @@
             while (_execute.load(std::memory_order_acquire)) {
                 func();
                 std::this_thread::sleep_for(
-                std::chrono::milliseconds(interval));
+                    std::chrono::milliseconds(interval)
+                );
             }
         });
     }
